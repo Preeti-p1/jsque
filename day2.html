@@ -9,33 +9,95 @@
 </head>
 
 <body>
-    <h1>6.What are closures?</h1>
+    <h1>9.What are closures?</h1>
     <p>closures is combination of functions. Take a functon and in that function take another function inside.With the
         help of inner function scope execute the outer function scope.
     </p>
     <p>In the other word, the closures gives you access to an outer function's scope from an inner function</p>
+    <pre>
+        function makeFunc() {
+            const name = 'Mozilla';
+            function displayName() {
+              console.log(name);
+            }
+            return displayName;
+          }
+          
+          const myFunc = makeFunc();
+          myFunc();
+          
+    </pre>
     <br>
-    <h1>7.Explain call(), apply() and, bind() methods.</h1>
+    <h1>10.Explain call(), apply() and, bind() methods.</h1>
     <p>call(): The call() method invokes a function with a given this value and arguments provided one by one</p><br>
     <p> apply:Invokes the function with a given this value and allows you to pass in arguments as an array</p><br>
     <p>bind: returns a new function, allowing you to pass any number of arguments</p>
     <br>
-    <h1>8.Explain prototypes </h1>
+    <h1>11.what is creation phase and execution phase</h1>
+    <p>The creation phase</p>
+        <p>When the JavaScript engine executes a script for the first time, it creates the global execution context. During this phase, the JavaScript engine performs the following tasks: Create the global object i.e., window in the web browser or global in Node. js</p>
+    <br>
+    <p>The Execution Context contains the code that's currently running, and everything that aids in its execution. During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.</p>
+    <br>
+    <h1>12.What are object in javascript?</h1>
+    <p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc.</p>
+    <pre>
+        let myCup = new Object();
+        myCup.color = "brown"
+        myCup.design = "round"
+        myCup.weight = "250g"
+    </pre>
+    <br>
+    <h1>13.What are function constructors?</h1>
+    <p>Function constructor is used to create new function object .Callinhg the constructor directly can create function dynamically, but suffer from security and similar performance issue to global object. </p>
+</h1>
+    <p></p>
+    <br>
+    <h1>14.Explain prototypes </h1>
     <p>prototype is a blue print of an object that is associated with every function and object by default in js</p>
     <br>
-    <h1>9.What is prototype chain?</h1>
+    <h1>15.What is prototype chain?</h1>
     <p>When a property or method is called on an object, if the object doesn’t contain it, the JavaScript engine will
         then look to the object’s prototype to resolve the property or method. You may have seen the term prototype
         chain before.</p>
-    <h1>10.What is callback?</h1>
+        <br>
+        <h1>16.How Inheritance works in Constructor Functions in JavaScript ?
+        </h1>
+        <p>we will discuss inheriting a constructor function in JavaScript. Constructor functions define the prototype of the properties an object will contain. Using the constructor function, we can create a new object after passing the required parameters.
+
+            Inheriting a previously defined constructor function means using the parameters of the previously defined function along with adding some new parameters to the newly defined constructor function. For this, we need to use the call() function which allows us to call a function defined somewhere else in the current context. 
+            
+            </p>
+        <pre>
+            function Employee(name, age, gender, id) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+                this.id = id;
+            };
+      
+            function Developer(name, age, gender, id, 
+            specialization) {
+      
+                // Calling Employee constructor function
+                Employee.call(this, name, age, gender, id);
+      
+                // Adding a new parameter
+                this.specialization = specialization;
+            }
+            console.log(Employee.prototype);
+            console.log(Developer.prototype);
+        </pre>
+        <br>
+    <h1>17.What is callback?</h1>
     <p>callback Function is a function passed into another function as an argument .This function is invoked inside the
         outer function to complete the actio</p>
     <br>
-    <h1>11.What is the use of setTimeout</h1>
+    <h1>18.What is the use of setTimeout</h1>
     <P>Syntax: setTimeout(function, time);</P>
     <p>setTimeout is used to execute the code only oncee after the interval time.</p>
     <br>
-    <h1>12.What is an event loop and call stack</h1>
+    <h1>19.What is an event loop and call stack</h1>
     <p>Execution Stack is also known "calling stack" is a stack with a LIFE (last in , fast out)structure which is used
         to store the execution context created during the code execution.</p>
     <P>The event loop is a constantly running process that monitors both the callback queue and the call stack.<br>
