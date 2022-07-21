@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1.Difference between “ == “ and “ === “ operators.</h1>
+    <p> “ == “ is used to check equal value</p>
+    <p> “ === “ is used to check both equal value and data type</p>
+    <br>
+    <h1>2. What is the spread operator?</h1>
+    <p>Spread operator allow us to quickly copy and part is an existing to an array or object into another object or
+        array </p>
+    <p>The spread operator is a new addition to the set of operators in JavaScript ES6. It takes in an iterable (e.g an
+        array) and expands it into individual elements.</p>
+    <br>
+    <h1>3.What are the differences between var, let and const?</h1>
+    <p>Var is a case sensitive .It is used to store data.Var variable can be updated and redeclared with in scope.It is
+        initailize with undefined </p>
+    <p>Const variable can neither be updated and redeclared .Its always remains same.</p>
+    <p>let variable can be update and can't be redeclaed .It is block scope.</p>
+    <br>
+    <h1>4. What is execution context</h1>
+    <p>Execution context is defined as the environment in which the js code is executed.</p>
+    <p>During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are
+        stored in memory, executable byte-code gets generated, and the code gets executed.</p>
+    <p>there are three types of executed context:-</p>
+    global executed context<br>
+    functions executed context<br>
+    executed context static <br>
+    <br>
+    <h1>5.What is meant by first class functions</h1>
+    <p>A Programming language is said to have first class functions when functions in that language are treated like any
+        other variable .for eg in such a language , function is passed as an argument in any other function and can
+        returned by other function and can be assigned as a value to a varaible. </p>
+    <br>
+    <h1>6.What are closures?</h1>
+    <p>closures is combination of functions. Take a functon and in that function take another function inside.With the
+        help of inner function scope execute the outer function scope.
+    </p>
+    <p>In the other word, the closures gives you access to an outer function's scope from an inner function</p>
+    <br>
+    <h1>7.Explain call(), apply() and, bind() methods.</h1>
+    <p>call(): The call() method invokes a function with a given this value and arguments provided one by one</p><br>
+    <p> apply:Invokes the function with a given this value and allows you to pass in arguments as an array</p><br>
+    <p>bind: returns a new function, allowing you to pass any number of arguments</p>
+    <br>
+    <h1>8.Explain prototypes </h1>
+    <p>prototype is a blue print of an object that is associated with every function and object by default in js</p>
+
+    <h1>9.What are promises and why do we need them?</h1>
+    <p>promises is js object that links productive code and consuming code.</p>
+    <p>Promise is used to handle asynchronous operations in js .They are easy to manage when dealing with multiple
+        asynchronous operation where callbacks can create callback hell leading to unmanged code . </p>
+    <h2>There are three states:-</h2>
+    pending: initial state, neither fulfilled nor rejected.<br>
+    fulfilled: meaning that the operation was completed successfully.<br>
+    rejected: meaning that the operation failed.<br>
+
+    <h2>Benefits of Promises</h2>
+
+    1. Improves Code Readability<br>
+    2. Better handling of asynchronous operations<br>
+    3. Better flow of control definition in asynchronous logic<br>
+    4. Better error handles.<br>
+
+    <h1>10.What is the purpose of async/await keywords?</h1>
+    <p>Async function is function which is decleared with async keyword . Async function will always returne value . It
+        is make sure that promises is returned and if it is not returned then js automaticall wraps it in promises which
+        is resolved with its value.</p>
+
+    <p>Await function is used to wait for the promises.</p>
+
+    <h1>11.What are function constructors?</h1>
+    <p>Function constructor is used to create new function object .Callinhg the constructor directly can create function
+        dynamically, but suffer from security and similar performance issue to global object. </p>
+
+    <h1>12.What is hoisting?</h1>
+    <p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope
+        before code execution. Remember that JavaScript only hoists declarations, not initialisation. </p>
+
+    <h1>13.what is DOM ?</h1>
+    <p>The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content
+        of a document on the web. </p>
+    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that
+        programs can change the document structure, style, and content. The DOM represents the document as nodes and
+        objects; that way, programming languages can interact with the page.</p>
+
+    <h1>14.Difference between undefined vs not defined vs NaN</h1>
+    <p> in undefined case where no value has been explicitly assigned to the variable, JavaScript calls it undefined.
+    </p>
+    <p>Null:- it is one of the js primitive's value and is treated like false in boolen operation. null is an empty
+        value and it must be assigned.we use null when we want empty value. </p>
+    <p>Not Defined :-A not defined is a variable that is not declared at a given point of time with declaration keyword
+        like var, let, or const.</p>
+
+    <h1>15.How many operators do we have in JS ?</h1>
+    1. Arithmetic Operators<br>
+    2. Comparison Operators<br>
+    3. Logical Operators<br>
+    4. Assignment Operators<br>
+    5. Conditional Operators<br>
+    6. Ternary Operator<br>
+
+    <h1>16.What are pure functions?</h1>
+    <p>
+        Pure Function is a function (a block of code ) that always returns the same result if the same arguments are passed. It does not depend on any state, or data change during a program’s execution rather it only depends on its input arguments.</p>
+
+    <h1>17.What is an event loop and call stack</h1>
+    <p>Execution Stack is also known "calling stack" is a stack with a LIFE (last in , fast out)structure which is used to store the execution context created during the code execution.</p>
+    <P>The event loop is a constantly running process that monitors both the callback queue and the call stack.<br>
+        If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack. If the callback queue is empty, nothing will happen
+        </P>
+
+    <h1>18.Explain if JS is Synchornous and Asynchronous ?</h1>
+    <p>Synchronous JavaScript: As the name suggests synchronous means to be in a sequence, i.e. every statement of the
+        code gets executed one by one. So, basically a statement has to wait for the earlier statement to get executed>
+    </p>
+    <p>Asynchronous JavaScript: Asynchronous code allows the program to be executed immediately where the synchronous
+        code will block further execution of the remaining code until it finishes the current one. </p>
+    <h1>19.What is callback?</h1>
+    <p>callback Function is a function passed into another function as an argument .This function is invoked inside the
+        outer function to complete the actio</p>
+    <h1>20.What is callback hell?</h1>
+    <p>Callback hell is a phenomenon that afflicts a JavaScript developer when he tries to execute multiple asynchronous
+        operations one after the other. By nesting callbacks in such a way, we easily end up with error-prone, hard to
+        read, and hard to maintain code</p>
+    <h1>21.What is the use of setTimeout</h1>
+    <P>Syntax: setTimeout(function, time);</P>
+    <p>setTimeout is used to execute the code only oncee after the interval time.</p>
+    <h1>22.what is promises chain?</h1>
+    <p>The process of executing a sequence of asynchronous operations one after another with the help of promises is known as promise chain. </p>
+<p id="clock"></p>
+    <script>
+        console.log("rani");
+
+        const fun2 = () => {
+            setTimeout(() => {
+                console.log(`fun2 is starting`);
+            }, 3000);
+        }
+
+        const fun1 = () => {
+            console.log(`fun1 is started`);
+            fun2()
+            console.log(`fun1 is ended`);
+        }
+
+        fun1();
+
+
+        var num1=[1,2,3];
+        var num2 = [5,6,7];
+        var numcombine= [...num1,...num2];
+        console.log(numcombine);
+
+
+
+        function currentTime() {
+    let date = new Date(); //Object
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+    let session = "AM";
+  
+    if(hh == 0){
+        hh = 12;
+    }
+    if(hh > 12){
+        hh = hh - 12;
+        session = "PM";
+     }
+  
+     hh = (hh < 10) ? "0" + hh : hh;
+     mm = (mm < 10) ? "0" + mm : mm;
+     ss = (ss < 10) ? "0" + ss : ss;
+      
+     let time = hh + ":" + mm + ":" + ss + " " + session;
+  
+    document.getElementById("clock").innerText = time; 
+    let t = setTimeout(function(){ currentTime() }, 1000);
+  }
+  currentTime()
+
+    </script>
+</body>
+
+</html>

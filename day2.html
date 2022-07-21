@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>6.What are closures?</h1>
+    <p>closures is combination of functions. Take a functon and in that function take another function inside.With the
+        help of inner function scope execute the outer function scope.
+    </p>
+    <p>In the other word, the closures gives you access to an outer function's scope from an inner function</p>
+    <br>
+    <h1>7.Explain call(), apply() and, bind() methods.</h1>
+    <p>call(): The call() method invokes a function with a given this value and arguments provided one by one</p><br>
+    <p> apply:Invokes the function with a given this value and allows you to pass in arguments as an array</p><br>
+    <p>bind: returns a new function, allowing you to pass any number of arguments</p>
+    <br>
+    <h1>8.Explain prototypes </h1>
+    <p>prototype is a blue print of an object that is associated with every function and object by default in js</p>
+    <br>
+    <h1>9.What is prototype chain?</h1>
+    <p>When a property or method is called on an object, if the object doesn’t contain it, the JavaScript engine will
+        then look to the object’s prototype to resolve the property or method. You may have seen the term prototype
+        chain before.</p>
+    <h1>10.What is callback?</h1>
+    <p>callback Function is a function passed into another function as an argument .This function is invoked inside the
+        outer function to complete the actio</p>
+    <br>
+    <h1>11.What is the use of setTimeout</h1>
+    <P>Syntax: setTimeout(function, time);</P>
+    <p>setTimeout is used to execute the code only oncee after the interval time.</p>
+    <br>
+    <h1>12.What is an event loop and call stack</h1>
+    <p>Execution Stack is also known "calling stack" is a stack with a LIFE (last in , fast out)structure which is used
+        to store the execution context created during the code execution.</p>
+    <P>The event loop is a constantly running process that monitors both the callback queue and the call stack.<br>
+        If the call stack is not empty, the event loop waits until it is empty and places the next function from the
+        callback queue to the call stack. If the callback queue is empty, nothing will happen
+        <script>
+            console.log("rani");
+
+            const fun2 = () => {
+                setTimeout(() => {
+                    console.log(`fun2 is starting`);
+                }, 3000);
+            }
+
+            const fun1 = () => {
+                console.log(`fun1 is started`);
+                fun2()
+                console.log(`fun1 is ended`);
+            }
+
+            fun1();
+
+
+            var num1 = [1, 2, 3];
+            var num2 = [5, 6, 7];
+            var numcombine = [...num1, ...num2];
+            console.log(numcombine);
+
+
+
+            function currentTime() {
+                let date = new Date(); //Object
+                let hh = date.getHours();
+                let mm = date.getMinutes();
+                let ss = date.getSeconds();
+                let session = "AM";
+
+                if (hh == 0) {
+                    hh = 12;
+                }
+                if (hh > 12) {
+                    hh = hh - 12;
+                    session = "PM";
+                }
+
+                hh = (hh < 10) ? "0" + hh : hh;
+                mm = (mm < 10) ? "0" + mm : mm;
+                ss = (ss < 10) ? "0" + ss : ss;
+
+                let time = hh + ":" + mm + ":" + ss + " " + session;
+
+                document.getElementById("clock").innerText = time;
+                let t = setTimeout(function () { currentTime() }, 1000);
+            }
+            currentTime()
+
+        </script>
+</body>
+
+</html>

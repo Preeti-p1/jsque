@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+<h1>21.What are promises and why do we need them?</h1>
+    <p>promises is js object that links productive code and consuming code.</p>
+    <p>Promise is used to handle asynchronous operations in js .They are easy to manage when dealing with multiple
+        asynchronous operation where callbacks can create callback hell leading to unmanged code . </p>
+    <h2>There are three states:-</h2>
+    pending: initial state, neither fulfilled nor rejected.<br>
+    fulfilled: meaning that the operation was completed successfully.<br>
+    rejected: meaning that the operation failed.<br>
+
+    <h2>Benefits of Promises</h2>
+
+    1. Improves Code Readability<br>
+    2. Better handling of asynchronous operations<br>
+    3. Better flow of control definition in asynchronous logic<br>
+    4. Better error handles.<br>
+<pre>
+    const promise = new Promise(
+  (resolve) => {
+    setTimeout(() => {
+      resolve("I'm a Promise!");
+    }, 5000);
+  },
+  (reject) => {}
+);
+
+promise.then((value) => console.log(value));
+
+</pre>
+    <h1>22.What is the purpose of async/await keywords?</h1>
+    <p>Async function is function which is decleared with async keyword . Async function will always returne value . It
+        is make sure that promises is returned and if it is not returned then js automaticall wraps it in promises which
+        is resolved with its value.</p>
+
+    <p>Await function is used to wait for the promises.</p>
+
+    <h1>23.What is hoisting?</h1>
+    <p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope
+        before code execution. Remember that JavaScript only hoists declarations, not initialisation. </p>
+<br>
+        <h1>24.what is DOM ?</h1>
+        <p>The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content
+            of a document on the web. </p>
+        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that
+            programs can change the document structure, style, and content. The DOM represents the document as nodes and
+            objects; that way, programming languages can interact with the page.</p>
+            <br>
+
+    
+
+
+    <h1>25.Difference between undefined vs not defined vs NaN</h1>
+    <p> in undefined case where no value has been explicitly assigned to the variable, JavaScript calls it undefined.
+    </p>
+    <p>Null:- it is one of the js primitive's value and is treated like false in boolen operation. null is an empty
+        value and it must be assigned.we use null when we want empty value. </p>
+    <p>Not Defined :-A not defined is a variable that is not declared at a given point of time with declaration keyword
+        like var, let, or const.</p>
+
+    <h1>26.How many operators do we have in JS ?</h1>
+    1. Arithmetic Operators<br>
+    2. Comparison Operators<br>
+    3. Logical Operators<br>
+    4. Assignment Operators<br>
+    5. Conditional Operators<br>
+    6. Ternary Operator<br>
+
+    <h1>27.What are pure functions?</h1>
+    <p>Pure Function is a function (a block of code ) that always returns the same result if the same arguments are passed. It does not depend on any state, or data change during a program’s execution rather it only depends on its input arguments.</p>
+<br>
+<h1>28.What is callback hell?</h1>
+<p>Callback hell is a phenomenon that afflicts a JavaScript developer when he tries to execute multiple asynchronous
+    operations one after the other. By nesting callbacks in such a way, we easily end up with error-prone, hard to
+    read, and hard to maintain code</p>
+<br>
+    <h1>29.what is promises chain?</h1>
+    <p>The process of executing a sequence of asynchronous operations one after another with the help of promises is known as promise chain. </p>
+<br>
+<h1>30.what is arror function</h1>
+<p>Arrow function is also called fattey function.Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions. </p>
+<br>
+<h1>31.Give an example of async/await?</h1>
+<pre>
+    async function f() {
+
+        let promise = new Promise((resolve, reject) => {
+          setTimeout(() => resolve("done!"), 1000)
+        });
+      
+        let result = await promise; // wait until the promise resolves (*)
+      
+        alert(result); // "done!"
+      }
+      
+      f();
+</pre>
+   </body>
+   </html>
