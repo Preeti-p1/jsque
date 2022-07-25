@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsday</title>
+</head>
+<body>
+    <p>42.create a button ,on click of which new heading tag h1 should be added with text as "MENU STack " on the screen above button.</p>
+   <nav>
+            <h1 id="heading"> Home </h1>
+
+            <button id="btn">
+                change text
+            </button>
+        </nav>
+
+    <p>43.Given an array find out total no. of odd and even nos.</p>
+
+    <p>44.Given an array of 0's and 1's find out number of 0's</p>
+
+    <p>45.write code to get 1st h1 element from a webpage using DOM</p>
+    <h3> let h1 = document.getElementsByTagName('h1');[0];</h3>
+
+    <p>46.Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</p>
+    <div class="HIE" id="helloWorld"></div>
+
+    <p>47.Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+    <h3 id="text">change</h3>
+    <button id="btn2">button</button>
+
+    <p>48.Create an HTML page having content as Hello world and a button named "Hide Text." When user will click on this button hide the "Hello World" text</p>
+    <h1 id="text1">hide text</h1>
+<button id="btn3">hide</button>
+
+    <p>49.Given a string find out number of vowels </p>
+
+
+    <p>50.Write a code to create two objects with 2 properties each, one will be string and other will be an array. Create a function to check if all the elements of the arrays in both the objects are same</p>
+    <script>
+
+    // 42 que
+ const ele = document.getElementById("heading");
+            const btn = document.getElementById("btn");
+
+
+            btn.addEventListener('click',function(){
+
+                ele.innerText= "Welcome to Elevation academy";
+
+            })
+//43 que
+            const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ let odd = 0;
+ let even = 0;
+    for (let i = 0; i < array.length; i++) {
+         if (array[i] & 1 == 1)
+             odd++;
+         else
+             even++;
+     }
+ console.log("Even =", even);
+  console.log("Odd = ", odd); 
+
+//44 que 
+ let arr=[1,1,0,0,0,0,1,0,1,0,0];
+let length=arr.length;
+var count=0;
+
+for(let i=0;i<length;i++){
+    if(arr[i]==0){
+        count=count+1;
+    }
+}
+console.log(count)
+
+//46 que 
+    function helloWorld(){
+            var d = new Date().toLocaleTimeString();
+        
+            document.getElementById("helloWorld").innerText = d ;
+        }
+        var oneSecond = 1000;
+        setInterval(helloWorld,oneSecond)
+
+        //47 que
+var text = document.getElementById("text");
+        var btn2 = document.getElementById('btn2');
+
+      btn2.addEventListener('click',()=>{
+    
+    text.innerText="Welcome to Elevation academy"
+})
+//48 que 
+document.getElementById('btn3').addEventListener('click',()=>{
+    let text=document.getElementById('text1')
+    text.style.display='none';
+})
+
+//49 que 
+function findVowels(str){
+    var total=0;
+    let length1=str.length;
+    for(let i=0;i<length1;i++){
+        if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' ){
+          total=total+1;
+        }
+    }
+    console.log(total)
+}
+findVowels('RANJEET'.toLowerCase())
+
+//50 que
+let obj1 = {
+    name: "Ranjeet",
+    arr1: [1, 2, 3, 4, 5],
+  };
+  let obj2 = {
+    name: "Ranjeet",
+    arr2: [1, 12, 3, 4, 5],
+  };
+  
+  function check(obj1, obj2) {
+    let n = obj1.arr1.length;
+    let length = 0;
+    for (let i in obj1.arr1) {
+      if (obj1.arr1[i] === obj2.arr2[i]) {
+        length++;
+      }
+    }
+    if (length === n) {
+      console.log("Equal");
+    } else {
+      console.log("Not Equal");
+    }
+  }
+  check(obj1, obj2);
+  
+    </script>
+</body>
+</html>
